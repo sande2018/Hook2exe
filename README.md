@@ -38,7 +38,7 @@
 | 项 | 要求 | 说明 |
 |---|---|---|
 | 操作系统 | Windows x64 | |
-| Edge / WebView2 运行时 | 任一即可 | Win10/11 一般自带 |
+| Edge / WebView2 运行时 | 任一即可 | Win10/11 一般自带；缺失时从微软官方下载：[WebView2 运行时下载页](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/consumer?form=MA13LH&cs=4203144341) |
 | .NET Framework | 4.x | 系统自带 |
 
 ---
@@ -206,7 +206,7 @@ Hook2Exe/
 ## 常见问题（FAQ）
 
 **Q：生成的 exe 双击没反应 / 闪退？**
-检查目标机是否 64 位 Windows、是否装有 Edge 或 WebView2 运行时；再看 `%LOCALAPPDATA%\HookApp\<哈希>\host.log` 里的报错。
+检查目标机是否 64 位 Windows、是否装有 Edge 或 WebView2 运行时，没有的话到微软官方页面下载安装：[WebView2 运行时下载页](https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/consumer?form=MA13LH&cs=4203144341)；装完仍异常再看 `%LOCALAPPDATA%\HookApp\<哈希>\host.log` 里的报错。
 
 **Q：脚本好像没生效？**
 应用内按 F12 打开控制台看报错；确认脚本的 `@match` 能匹配目标网址；如果脚本要跑在 iframe 里，生成时加 `--all-frames`。
